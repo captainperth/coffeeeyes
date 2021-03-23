@@ -5,20 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>☕👀</title>
+    <style type="text/css" media="screen">
+        div.container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body {
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+        }
+        .content {
+            padding-top: 15rem;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box {
+            width: 75%;
+            height: 10rem;
+        }           
+        #wrapper {
+          flex: 1;
+        }
+        #button-content {
+            width: 50%;
+        }
+      </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Is it Time?</h1>
-    </div>
-    <div class="container">
-        <button class="button">☕👀</button>
-    </div>   
-</body>
-<footer class="footer">
-    <div class="container">
-        ☕👀
+    <div id="wrapper">
+        <div class="hero is-small is-primary is-bold is-centered">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title is-1 has-text-weight-bold" id="title">Is it Time?</h1>
+                </div>                
+            </div>            
+        </div>
+        <div class="content">
+            <div class="columns pb-6">
+                <div class="container column">
+                    <button class="button is-outlined is-primary is-large is-rounded" onclick="show()">☕👀</button>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="container box">
+                    <div id="button-content has-text-centered">
+                        <h2 class="title is-3 has-text-weight-bold" id="toggle" style="display: none;">YES.</h2>
+                    </div>
+                </div> 
+            </div>    
+        </div>           
     </div>    
+</body>
+<footer class="footer has-text-centered py-2">
+    ©☕👀
 </footer>
 </html>
+<script>
+    function show() {
+      var x = document.getElementById("toggle");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+</script>
